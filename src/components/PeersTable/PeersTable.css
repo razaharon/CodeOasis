@@ -1,0 +1,43 @@
+.green-row {
+  background-color: rgb(245, 251, 248);
+}
+h3,
+h4 {
+  font-weight: normal;
+}
+h1 {
+  margin-right: 10px;
+  color: rgb(171, 205, 197);
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+h1,
+h3 {
+  display: inline;
+}
+h1,h4{
+  margin-left: 15px;
+}
+.table-container {
+  padding-top: 10px;
+}
+.table-header {
+  margin-bottom: 20px;
+}
+i {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.remove-button {
+  color: white !important;
+  background-color: green !important;
+  padding: 0px 0px 0px 0px !important;
+  min-width: 24px !important;
+  float: right;
+}
+
+th,
+.green-row > td {
+  font-weight: bold !important;
+}

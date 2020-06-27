@@ -1,0 +1,17 @@
+h3 {
+  font-weight: normal;
+}
+h1 {
+  margin-left: 15px;
+  margin-right: 10px;
+  color: rgb(171, 205, 197);
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+h1,
+h3 {
+  display: inline;
+}
+.chart-container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
