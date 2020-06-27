@@ -13,18 +13,7 @@ import Peer from "../../interfaces/Peer";
 import { useSelector, useDispatch } from "react-redux";
 import { removePeer } from "../../peer-store/actions";
 import "./PeersTable.css";
-
-const avgReducer = (
-  acc: number,
-  curr: number,
-  index: number,
-  arr: number[]
-): number => {
-  acc += curr;
-  if (index + 1 === arr.length)
-    return parseFloat((acc / arr.length).toFixed(2));
-  return acc;
-};
+import avgReducer from "../../utils/avgReducer";
 
 const isBetterYearIndicator = (
   currentYearValue: number,
@@ -87,13 +76,13 @@ export default function PeersTable() {
           <TableRow className="green-row">
             <TableCell>Average</TableCell>
             <TableCell>
-              {peers.map((peer) => peer.years[0]).reduce(avgReducer)}%
+              {peers.map((peer) => peer.years[0]).reduce(avgReducer, 0)}%
             </TableCell>
             <TableCell>
-              {peers.map((peer) => peer.years[1]).reduce(avgReducer)}%
+              {peers.map((peer) => peer.years[1]).reduce(avgReducer, 0)}%
             </TableCell>
             <TableCell>
-              {peers.map((peer) => peer.years[2]).reduce(avgReducer)}%
+              {peers.map((peer) => peer.years[2]).reduce(avgReducer, 0)}%
             </TableCell>
           </TableRow>
         </TableBody>
